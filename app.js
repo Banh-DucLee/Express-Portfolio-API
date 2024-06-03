@@ -15,7 +15,14 @@ mongoose.connect(`mongodb+srv://ducleebanh:Yz7fUvzYZwXeGBSD@portfolio.sxnwpzj.mo
 
 app.use(express.json());
 
+const path = require('path');
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
 const authRoutes = require('./routes/user_route');
 app.use('/api/auth', authRoutes);
+
+const skillRoutes = require('./routes/skill_route');
+app.use('/api/skills', skillRoutes);
+
 
 module.exports = app;
