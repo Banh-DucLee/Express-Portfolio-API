@@ -24,5 +24,15 @@ app.use('/api/auth', authRoutes);
 const skillRoutes = require('./routes/skill_route');
 app.use('/api/skills', skillRoutes);
 
+const projectRoutes = require('./routes/project_route');
+app.use('/api/projects', projectRoutes);
 
+const socialRoutes = require('./routes/social_route');
+app.use('/api/socials', socialRoutes);
+
+const aboutRoutes = require('./routes/about_route');
+app.use('/api/abouts', aboutRoutes);
+
+const contactRoutes = require('./routes/contact_route');
+app.use('/api/contacts', contactRoutes);
 module.exports = app;
