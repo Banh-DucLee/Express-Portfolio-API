@@ -22,7 +22,7 @@ function processImage(req, res, next) {
         const name = originalname.split('.').slice(0, -1).join('.');
 
         if (!['svg'].includes(fileExtension)) {
-            const ref = `${new Date().toISOString()}_${name.split(' ').join('_').webp}`;
+            const ref = `${new Date().toISOString()}_${name.split(' ').join('_')}.webp`;
             sharp(buffer).webp({quality: 20}).toFile(`images/${ref}`, (error) => {
                 if(error) {
                     fs.unlinkSync(`images/${ref}`);
