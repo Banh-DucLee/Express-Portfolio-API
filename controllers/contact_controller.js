@@ -21,7 +21,7 @@ exports.getContact = (req, res) => {
 }
 
 exports.create = (req, res) => {
-    const contactObject = JSON.parse(req.body.contact);
+    const contactObject = req.body;
     delete contactObject._id;
 
     const contact = new Contact({
