@@ -35,4 +35,8 @@ app.use('/api/abouts', aboutRoutes);
 
 const contactRoutes = require('./routes/contact_route');
 app.use('/api/contacts', contactRoutes);
+
+const resumeRoutes = require('./routes/resume_route');
+app.use('/api/resume', resumeRoutes);
+
 module.exports = app;
